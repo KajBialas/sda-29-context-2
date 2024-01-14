@@ -50,14 +50,14 @@ const AddPost = () => {
 
     
     return (
-        <div>
-            <h1>Dodaj nowego posta</h1>
-            {success && <div>Poprawnie dodano posta</div>}
-            {error && <div>Nie udało sie dodac</div>}
-            {isLoading && <div>Trwa dodawanie posta</div>}
+        <div className="max-w-md mx-auto my-8 p-4 shadow-lg rounded-md bg-gray-100">
+            <h1 className='text-2xl font-bold mb-4'>Dodaj nowego posta</h1>
+            {success && <div className='text-green-600'>Poprawnie dodano posta</div>}
+            {error && <div className='text-red-600'>Nie udało sie dodac</div>}
+            {isLoading && <div className='text-yellow-500'>Trwa dodawanie posta</div>}
             <form onSubmit={handleSubmit}>
-                <input type="text" value={title} placeholder="Tytuł postu" onChange={e => setTitle(e.target.value)} />
-                <button type="submit">Dodaj posta</button>
+                <input className="w-full p-2 border border-gray-300 rounded-md mb-4" type="text" value={title} placeholder="Tytuł postu" onChange={e => setTitle(e.target.value)} />
+                <button className="bg-green-500 text-white font-bold p-4 rounded-md hover:bg-green-600" type="submit">Dodaj posta</button>
             </form>
         </div>
     )

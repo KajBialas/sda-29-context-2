@@ -1,5 +1,6 @@
-// Zadanie 3 - useContext
-// Utwórz context, tak zeby po dodaniu nowego posta, byl on takze widoczny na liscie postow
+// Zadanie 4 - TailwindCSS
+// Zainstalowanie TailwindCSS
+// Ostylowanie formularza dodawania postów
 
 
 import PostList from "./components/PostList";
