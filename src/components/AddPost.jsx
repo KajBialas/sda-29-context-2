@@ -1,14 +1,21 @@
 import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
+import { usePostsContext } from '../context/blogContext';
 
 const AddPost = () => {
     const [title, setTitle] = useState('');
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [success, setSuccess] = useState(false);
+    const { setPosts } = usePostsContext();
 
     const addNewPost = async () => {
         try {
+            const newPost = {
+                id: uuid(), 
+                title: title
+            };
+
             setIsLoading(true);
             setSuccess(false);
             const response = await fetch('http://localhost:3500/posts', {
@@ -16,13 +23,14 @@ const AddPost = () => {
                 headers: {
                   'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({id: uuid(), title: title}),
+                body: JSON.stringify(newPost),
             });
 
             if(!response.ok) {
                 throw new Error('Błąd');
             }
 
+            setPosts(prevPosts => [newPost, ...prevPosts])
             setTitle('');
         } catch(error) {
             setError(error)

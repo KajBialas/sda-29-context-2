@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
+import { usePostsContext } from '../context/blogContext';
 
 const PostList = () => {
-    const [data, setData] = useState([]);
+    const { posts, setPosts } = usePostsContext();
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -15,7 +16,7 @@ const PostList = () => {
                 }
 
                 const result = await response.json();
-                setData(result);
+                setPosts(result);
             } catch (error) {
                 setError(error)
             } finally {
@@ -38,7 +39,7 @@ const PostList = () => {
         <div>
             <h1>Lista postów:</h1>
             <div>
-                {data.map(post => (
+                {posts.map(post => (
                     <div key={post.id}>
                         {post.title}
                     </div>
