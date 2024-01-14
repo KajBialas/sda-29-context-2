@@ -1,21 +1,23 @@
-// Zadanie 4 - TailwindCSS
-// Zainstalowanie TailwindCSS
-// Ostylowanie formularza dodawania postów
+// Zadanie 5 - TailwindCSS
+// Ostylować komunikaty błędów, ładowania oraz sukcesu wykorzystujac komponenty tailwind
+// Chcemy zeby te komunikaty byly kolorowymi belkami
 
 
 import PostList from "./components/PostList";
 import AddPost from "./components/AddPost";
 import { PostsProvider } from "./context/blogContext";
+import Spotify from "./components/Spotify";
 
 function App() {
 
   return (
-    <PostsProvider>
-      <div>
-        <AddPost />
-        <PostList />
-      </div>
-    </PostsProvider>
+    <Spotify />
+    // <PostsProvider>
+    //   <div>
+    //     <AddPost />
+    //     <PostList />
+    //   </div>
+    // </PostsProvider>
   )  
 }
 

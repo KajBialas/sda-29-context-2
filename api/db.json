@@ -1,4 +1,48 @@
 {
+    "music": [
+        {
+          "audio": "/assets/music/Aylex-Energizer.mp3",
+          "cover": "/assets/music/Aylex-Energizer.webp",
+          "author": "Aylex",
+          "title": "Energizer",
+          "id": "track_1"
+        },
+        {
+          "audio": "/assets/music/Aylex-Rebellion.mp3",
+          "cover": "/assets/music/Aylex-Rebellion.webp",
+          "author": "Aylex",
+          "title": "Rebellion",
+          "id": "track_2"
+        },
+        {
+          "audio": "/assets/music/Ethan-Sturock-Feel-Alive.mp3",
+          "cover": "/assets/music/Ethan-Sturock-Feel-Alive.webp",
+          "author": "Ethan Sturock",
+          "title": "Feel Alive",
+          "id": "track_3"
+        },
+        {
+          "audio": "/assets/music/Ethan-Sturock-Summer-Time.mp3",
+          "cover": "/assets/music/Ethan-Sturock-Summer-Time.webp",
+          "author": "Ethan Sturock",
+          "title": "Summer Time",
+          "id": "track_4"
+        },
+        {
+          "audio": "/assets/music/Pufino-Metal-Is-Trash.mp3",
+          "cover": "/assets/music/Pufino-Metal-Is-Trash.webp",
+          "author": "Pufino",
+          "title": "Metal Is Trash",
+          "id": "track_5"
+        },
+        {
+          "audio": "/assets/music/Pufino-Stadium-Rock.mp3",
+          "cover": "/assets/music/Pufino-Stadium-Rock.webp",
+          "author": "Pufino",
+          "title": "Stadium Rock",
+          "id": "track_6"
+        }
+      ],
   "posts": [
     {
       "id": "1",
@@ -35,6 +79,10 @@
     {
       "id": "610b2eda-2359-4867-b44a-d41b0cdcef00",
       "title": ""
+    },
+    {
+      "id": "9fd58a25-9373-4233-a1e1-5799efcfb48c",
+      "title": "nowy"
     }
   ]
 }
