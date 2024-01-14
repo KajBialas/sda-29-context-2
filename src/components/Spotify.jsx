@@ -1,8 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
+
+// Zadanie 6 - dodaj funckjonalność wyboru piosenek
 
 const Spotify = () => {
     const [songs, setSongs] = useState([]);
     const [selectedSong, setSelectedSong] = useState(0);
+    const audioRef = useRef();
 
     useEffect(() => {
         // TODO: Add error handling
@@ -17,7 +20,12 @@ const Spotify = () => {
         <section>
             <h1>Aktualnie słuchasz:</h1>
             <div>
-                {songs[0]?.title} by {songs[0]?.author}
+                <img src={songs[selectedSong]?.cover} />
+                <button>Play</button>
+                <button>Pause</button>
+                <audio ref={audioRef}>
+                    <source src={songs[selectedSong]?.audio} />
+                </audio>
             </div>
         </section>
         <section>
@@ -25,7 +33,7 @@ const Spotify = () => {
             <h1>Lista piosenek:</h1>
             <ul>
                 {songs.map((song, index) => (
-                    <li key={song.id}>{song.title} by {song.author}</li>
+                    <li key={song.id} onClick={() => setSelectedSong(index)}>{song.title} by {song.author}</li>
                 ))}
             </ul>
         </section>
